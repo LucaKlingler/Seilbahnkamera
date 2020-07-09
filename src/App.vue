@@ -7,11 +7,11 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    //controls,
+    HelloWorld,
   }
 }
 </script>
