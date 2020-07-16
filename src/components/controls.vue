@@ -13,13 +13,13 @@ export default {
   name: 'controls',
   methods: {
     right(){
-      this.$socket.emit('chat message',1:120&2:1);
+      this.$socket.emit('chat message','1:120&2:1');
     },
     left(){
-      this.$socket.emit('chat message',1:120&2:2);
+      this.$socket.emit('chat message','1:120&2:2');
     },
     stop(){
-      this.$socket.emit('chat message',1:0&2:1);
+      this.$socket.emit('chat message','1:0&2:1');
     }
   }
 }
