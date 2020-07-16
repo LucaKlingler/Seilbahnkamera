@@ -1,9 +1,15 @@
-import Vue from 'vue'
-//import store from './store'
-import App from './App.vue'
-import VueSocketIO from 'vue-socket.io'
-//import SocketIO from "socket.io-client"
- 
+import Vue from 'vue';
+import App from './App.vue';
+import VueSocketIO from 'vue-socket.io';
+import '@babel/polyfill'
+import './plugins/bootstrap-vue';
+import 'mutationobserver-shim';
+import { BootstrapVue, BootstrapVueIcons} from 'bootstrap-vue'; 
+
+Vue.use(BootstrapVue);
+Vue.use(BootstrapVueIcons);
+
+
 Vue.config.productionTip = false
 
 Vue.use(new VueSocketIO({
