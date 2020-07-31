@@ -3,7 +3,8 @@
     <strong>Connected: {{connected}}</strong><br><br><br>
     <div>
       <h4>Controls</h4>
-      <b-button class="buttons" v-on:click="left()">LEFT</b-button>
+      {{leftPressed}}
+      <b-button class="buttons"  @mouseup="leftPressed = false" @mousedown="leftPressed = true">LEFT</b-button>
       <b-button class="buttons" v-on:click="stop()">STOP</b-button>
       <b-button class="buttons" v-on:click="right()">RIGHT</b-button>
     </div>
@@ -42,6 +43,7 @@
     data: function () {
       return {
         connected: false,
+        leftPressed: false,
       }
     },
   }
