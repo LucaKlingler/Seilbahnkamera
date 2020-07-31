@@ -16,7 +16,7 @@ Vue.config.productionTip = false
 Vue.use(new VueSocketIO({
     debug: true,
     // eslint-disable-next-line no-template-curly-in-string
-    connection: 'https://hal.hfg.design:10000/marcbot_control',
+    connection: 'https://hal.hfg.design:10000/lucabot_control',
     options: {
       useConnectionNamespace: true,
     },
