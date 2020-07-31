@@ -4,7 +4,7 @@
     <div>
       <h4>Controls</h4>
       {{leftPressed}}
-      <b-button class="buttons"  @mouseup="leftPressed = false" @mousedown="leftPressed = true">LEFT</b-button>
+      <b-button class="buttons"  @mouseup="left(true)" @mousedown="left(false)">LEFT</b-button>
       <b-button class="buttons" v-on:click="stop()">STOP</b-button>
       <b-button class="buttons" v-on:click="right()">RIGHT</b-button>
     </div>
@@ -17,8 +17,12 @@
       right() {
         this.$socket.emit('chat message', '1:120&2:1');
       },
-      left() {
-        this.$socket.emit('chat message', '1:120&2:2');
+      left(go) {
+        if (go) {
+          this.$socket.emit('chat message', 'l1');
+        } else {
+          this.$socket.emit('chat message', 'l0');
+        }
       },
       stop() {
         this.$socket.emit('chat message', '1:0&2:1');
