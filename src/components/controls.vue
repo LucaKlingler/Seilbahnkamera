@@ -3,8 +3,8 @@
     <strong>Connected: {{connected}}</strong><br><br><br>
     <div>
       <h4>Controls</h4>
-      <b-button class="buttons"  @mouseup="left(true)" @mousedown="left(false)">LEFT</b-button>
-      <b-button class="buttons" @mouseup="right(true)" @mousedown="right(false)">RIGHT</b-button>
+      <b-button class="buttons"  @mouseup="left(false)" @mousedown="left(true)">LEFT</b-button>
+      <b-button class="buttons" @mouseup="right(false)" @mousedown="right(true)">RIGHT</b-button>
     </div>
   </div>
 </template>
